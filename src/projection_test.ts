@@ -218,7 +218,7 @@ function ortho_cube2(dr: Drawing)
 function perspective_cube(dr: Drawing)
 {
   dr.initMatrix();
-  dr.perspective (60.0, 1.0, 100.0);
+  dr.perspective (60.0, -1.0, -100.0);
 
   dr.translate (0.0, 0.0, -4.0);
   Cube(dr);
@@ -227,7 +227,7 @@ function perspective_cube(dr: Drawing)
 // Draw multiple cubes in perspective.
 function perspective_multi_cube(dr: Drawing)
 {
-  dr.perspective (60.0, 1.0, 100.0);
+  dr.perspective (60.0, -1.0, -100.0);
 
   // draw several cubes in three lines along the axes
   for (let delta = -12; delta <= 12; delta += 3) {
