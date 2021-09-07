@@ -87,8 +87,8 @@ function keyPressed(key: string) {
 // Test square drawing.
 function ortho_test(dr: Drawing)
 {
-  let near = 1.0;
-  let far = 40.0;
+  let near = -1.0;
+  let far = -40.0;
   
   dr.initMatrix();
   dr.ortho (-100.0, 100.0, 100.0, -100.0, near, far);
@@ -98,8 +98,8 @@ function ortho_test(dr: Drawing)
 // Test square drawing with non-uniform scaling.
 function ortho_test_scale(dr: Drawing)
 {
-  let nnear = 1.0;
-  let ffar = 40.0;
+  let nnear = -1.0;
+  let ffar = -40.0;
 
   dr.initMatrix();
   dr.ortho (-100.0, 100.0, 100.0, -100.0, nnear, ffar);
@@ -110,8 +110,8 @@ function ortho_test_scale(dr: Drawing)
 // Test square drawing with rotation.
 function ortho_test_rotate(dr: Drawing)
 {
-  let nnear = 1.0;
-  let ffar = 40.0;
+  let nnear = -1.0;
+  let ffar = -40.0;
 
   dr.initMatrix();
   dr.ortho (-100.0, 100.0, 100.0, -100.0, nnear, ffar);
@@ -193,7 +193,7 @@ function Cube(dr: Drawing)
 function ortho_cube(dr: Drawing)
 { 
   dr.initMatrix();
-  dr.ortho (-2.0, 2.0, 2.0, -2.0, 0.0, 10000.0);
+  dr.ortho (-2.0, 2.0, 2.0, -2.0, 0.0, -10000.0);
 
   dr.translate (0.0, 0.0, -4.0);
   dr.rotateY(17.0);
@@ -205,7 +205,7 @@ function ortho_cube(dr: Drawing)
 function ortho_cube2(dr: Drawing)
 {    
   dr.initMatrix();
-  dr.ortho (-2.0, 2.0, 2.0, -2.0, 0.0, 10000.0);
+  dr.ortho (-2.0, 2.0, 2.0, -2.0, 0.0, -10000.0);
 
   dr.translate (0.0, 0.0, -4.0);
   dr.rotateZ(5.0);
@@ -256,8 +256,8 @@ function perspective_multi_cube(dr: Drawing)
 // Test the matrix stack by drawing a face.
 function face_test(dr: Drawing)
 {
-  let nnear = -10.0;
-  let ffar = 100000.0;
+  let nnear = 10.0;
+  let ffar = -100000.0;
 
   dr.ortho (0.0, 1.0, 1.0, 0.0, nnear, ffar);
 
@@ -267,8 +267,8 @@ function face_test(dr: Drawing)
 // Draw four faces.
 function faces(dr: Drawing)
 {
-  let nnear = -10.0;
-  let ffar = 10000.0;
+  let nnear = 10.0;
+  let ffar = -10000.0;
 
   dr.initMatrix ();
 
