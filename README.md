@@ -6,7 +6,7 @@ The goal of this project is to learn the underlying techniques used in a graphic
 - You will test out your code with the help of the provided routines for drawing a few simple images. 
 - You will also create a routine that draws your initials on the screen in perspective.
 
-## Due: Wednesday September 22nd, 11:59pm
+## Due: Saturday September 18th, 11:59pm
 
 ## Rubric
 
